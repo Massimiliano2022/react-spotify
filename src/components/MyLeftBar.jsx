@@ -5,8 +5,8 @@ const MyLeftBar = () => {
     return (
         <>
             {/*<Col sm={2} style={{zIndex:1 , position: 'fixed' }}>*/}
-            <Col sm={2} style={{ zIndex: 1}}>
-                <nav className="navbar-dark bg-dark vh-100">
+            <Col sm={2} className='vh-100 d-flex flex-column justify-content-between p-3' style={{ zIndex: 1 , position: "fixed", background:'black'}}>
+                <nav className="navbar-dark">
                     <a className="navbar-brand" href="#home">
                         <img src={logo} alt='Logo' style={{ width: "130px", height: "40px" }} />
                     </a>
@@ -27,9 +27,11 @@ const MyLeftBar = () => {
                         <Button variant="outline-success" type="submit">Search</Button>
                     </Form>
                 </nav>
-                <nav className='d-flex flex-column fixed-bottom'>
-                    <Button variant="light" type="submit" style={{ width: "230px" }}>Sign up</Button>
-                    <Button variant="dark" type="submit" style={{ width: "230px" }}>Login</Button>
+                <nav className="navbar-dark">
+                    <div class="d-flex flex-column">
+                        <Button className="d-block" variant="light" type="button">Sign up</Button>
+                        <Button className="d-block" variant="dark" type="button">Login</Button>
+                    </div>
                     <ul className="navbar-nav text-light">
                         <li className="nav-item">
                             <a className="nav-link" href="#">

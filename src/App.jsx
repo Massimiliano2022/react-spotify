@@ -9,7 +9,7 @@ import { Container, Row } from "react-bootstrap";
 function App() {
   return (
     <BrowserRouter>
-      <Container fluid className="ps-0" style={{background:'black'}}>
+      <Container fluid style={{background: "linear-gradient(to right, #334660, #111821)"}}>
         <Row>
           <MyLeftBar />
           <Routes>

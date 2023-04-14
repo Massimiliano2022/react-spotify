@@ -37,12 +37,12 @@ const MyGallery = (props) => {
     }, [props.artist]);
 
     return (
-        <div className="p-5 m-0">
+        <div className="p-4 m-2">
             <h3>{props.title}</h3>
             <Row className="p-0 m-0">
                 {albums.map((album, index) => (
                     <Col sm={3} key={index}>
-                        <Card style={{ width: "200px", height: "200px" }} >
+                        <Card className="bg-dark text-light" style={{ width: "200px"}}>
                             <Card.Img variant="top" src={album.album.cover_medium} className="h-100 object-fit-cover" />
                             <Card.Body>
                                 <Card.Title className="text-truncate">{album.title}</Card.Title>
