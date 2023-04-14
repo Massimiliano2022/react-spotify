@@ -42,8 +42,8 @@ const MyGallery = (props) => {
             <Row className="p-0 m-0">
                 {albums.map((album, index) => (
                     <Col sm={3} key={index}>
-                        <Card className="bg-dark text-light" style={{ width: "200px"}}>
-                            <Card.Img variant="top" src={album.album.cover_medium} className="h-100 object-fit-cover" />
+                        <Card className="bg-dark text-light w-100">
+                            <Card.Img variant="top" src={album.album.cover_medium} className="w-100 h-100 object-fit-cover" />
                             <Card.Body>
                                 <Card.Title className="text-truncate">{album.title}</Card.Title>
                             </Card.Body>
