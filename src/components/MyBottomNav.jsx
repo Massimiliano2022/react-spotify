@@ -11,7 +11,7 @@ const MyBottomNav = () => {
     return (
 
         <Col className="fixed-bottom p-0" style={{ marginLeft: "16.66667%" }}>
-            <nav className="bg-dark" style={{ minHeight: "6rem" }}>
+            <nav className="bg-dark" style={{ height: "6rem" }}>
                 <div className="navbar-nav">
                     <Row>
                         <Col md={6}>
@@ -24,11 +24,10 @@ const MyBottomNav = () => {
                             </div>
                         </Col>
                     </Row>
-                    <Row className='d-flex justify-content-center'>
-                        <Col>
-                            <div className="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                                <div className="progress-bar" style={{ width: "0%"}}></div>
-                            </div>
+                    {/*<Row className='d-flex justify-content-center'>*/}
+                    <Row>
+                        <Col md={6} className="offset-2">
+                            <div className="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style={{ background: "grey", padding: "0.15rem" }}></div>
                         </Col>
                     </Row>
                 </div>
