@@ -21,7 +21,7 @@ const MyMain = () => {
 
 
     return(
-        <Col sm={10} className="text-light" style={{marginLeft:"16.66667%"}}>
+        <Col sm={10} className="text-light" style={{marginLeft:"16.66667%", paddingBottom:"6rem"}}>
 
             <MyGallery title={"Rock Classics"} artist={rockArtist}/>
             <MyGallery title={"Pop Culture"} artist={popArtist}/>

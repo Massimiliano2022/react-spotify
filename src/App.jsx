@@ -1,9 +1,12 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
+
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Container, Row } from "react-bootstrap";
+
 import MyMain from "./components/MyMain";
 import MyLeftBar from "./components/MyLeftBar";
-import { Container, Row } from "react-bootstrap";
+import MyBottomNav from "./components/MyBottomNav";
 
 
 function App() {
@@ -17,6 +20,9 @@ function App() {
             {/*<Route path="/:company" element={<CompanySearchResults />} />
             <Route path="/favourites" element={<Favourites />} />*/}
           </Routes>
+        </Row>
+        <Row>
+          <MyBottomNav/>
         </Row>
       </Container>
     </BrowserRouter>
