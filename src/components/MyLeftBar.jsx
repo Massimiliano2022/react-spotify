@@ -28,7 +28,7 @@ const MyLeftBar = () => {
                     </Form>
                 </nav>
                 <nav className="navbar-dark">
-                    <div class="d-flex flex-column">
+                    <div className="d-flex flex-column">
                         <Button className="d-block" variant="light" type="button">Sign up</Button>
                         <Button className="d-block" variant="dark" type="button">Login</Button>
                     </div>
