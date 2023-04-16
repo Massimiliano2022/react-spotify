@@ -2,16 +2,16 @@ import { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-const MyGallery = (props) => {
+const MyGallery = ({title, artist}) => {
 
     const [albums, setAlbums] = useState([]);
 
 
-    const URL = `https://striveschool-api.herokuapp.com/api/deezer/search?q=${props.artist}`;
+    const URL = `https://striveschool-api.herokuapp.com/api/deezer/search?q=${artist}`;
 
     const fetchAlbums = async () => {
 
-        if (props.artist) {
+        if (artist) {
 
             const response = await fetch(URL);
             try {
@@ -35,11 +35,11 @@ const MyGallery = (props) => {
     useEffect(() => {
         fetchAlbums();
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [props.artist]);
+    }, [artist]);
 
     return (
         <div className="p-5 m-5">
-            <h3>{props.title}</h3>
+            <h3>{title}</h3>
             <Row className="p-0 m-0">
                 {albums.map((album, index) => (
                     <Col sm={6} md={3} key={index}>
