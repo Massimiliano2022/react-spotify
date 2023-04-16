@@ -1,14 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 const MyAlbum = () => {
     
-    const [album, setAlbum] = useState(null);
+    const [albumId, setAlbumId] = useState(null);
     const params = useParams();
 
-    console.log("PARAMS: ", params);
+    useEffect(() => {
+        console.log("PARAMS: ", params.albumId);
+        setAlbumId(params.albumId);
+    }, [params.albumId]); 
 
-    //const URL= `https://striveschool-api.herokuapp.com/api/deezer/album/${id}`;
+    const URL= `https://striveschool-api.herokuapp.com/api/deezer/album/${albumId}`;
 
     return(
         <h1>My Album</h1>
