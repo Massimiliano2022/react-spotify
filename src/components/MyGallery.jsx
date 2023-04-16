@@ -44,9 +44,11 @@ const MyGallery = ({title, artist}) => {
                 {albums.map((album, index) => (
                     <Col sm={6} md={3} key={index}>
                         <div className="text-light w-100 text-center" style={{width:"200px", height:"200px"}}>
-                            <img src={album.album.cover_big} className="w-100 h-100 object-fit-cover" alt="Cover Album"/>
-                            <Link href="#" style={{textDecoration:"none", color:"#fff"}}><h6 className="text-truncate">{album.title}</h6></Link>
-                            <Link href="#" style={{textDecoration:"none", color:"#fff"}}><p>{album.artist.name}</p></Link>
+                            <Link to={`/album/${album.album.id}`}>
+                                <img src={album.album.cover_big} className="w-100 h-100 object-fit-cover" alt="Cover Album"/>
+                            </Link>
+                            <Link to={`/album/${album.album.id}`} style={{textDecoration:"none", color:"#fff"}}><h6 className="text-truncate">{album.title}</h6></Link>
+                            <Link to={`/artist/${album.artist.id}`} style={{textDecoration:"none", color:"#fff"}}><p>{album.artist.name}</p></Link>
                         </div>
                     </Col>
                 ))}

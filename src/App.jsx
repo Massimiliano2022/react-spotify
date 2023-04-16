@@ -7,6 +7,8 @@ import { Container, Row } from "react-bootstrap";
 import MyMain from "./components/MyMain";
 import MyLeftBar from "./components/MyLeftBar";
 import MyBottomNav from "./components/MyBottomNav";
+import MyAlbum from "./components/MyAlbum";
+import MyArtist from "./components/MyArtist";
 
 
 function App() {
@@ -17,8 +19,8 @@ function App() {
           <MyLeftBar />
           <Routes>
             <Route path="/" element={<MyMain />} />
-            {/*<Route path="/:company" element={<CompanySearchResults />} />
-            <Route path="/favourites" element={<Favourites />} />*/}
+            <Route path="/album/:albumId" element={<MyAlbum />} />
+            <Route path="/artist/:artistId" element={<MyArtist />} />
           </Routes>
         </Row>
         <Row>
