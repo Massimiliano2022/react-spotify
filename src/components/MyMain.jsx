@@ -1,5 +1,6 @@
-import { Col } from "react-bootstrap";
 import MyGallery from "./MyGallery";
+
+import { Col } from "react-bootstrap";
 import { useEffect, useState } from "react";
 
 const MyMain = () => {
@@ -11,7 +12,7 @@ const MyMain = () => {
     const [rockArtist , setRockArtist] = useState("");
     const [popArtist , setPopArtist] = useState("");
     const [hipHopArtist , sethipHopArtist] = useState("");
-
+    
     useEffect(() => {
         setRockArtist(rockArtists[Math.floor(Math.random() * rockArtists.length)]);
         setPopArtist(popArtists[Math.floor(Math.random() * popArtists.length)]);
